@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import {useState, useEffect} from 'react';
+
+import {Container, Row, Col} from 'react-bootstrap';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import Item from './components/Item';
 
 function App() {
+  const [products, setProducts] =useState([]);
+
+
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((res)=>res.json())
+    .then((data)=>{
+      setProducts(data);
+      console.log(Array.isArray(products))
+    })
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <div className="container">
+        <Container>
+          <Row className='justify-content-center'>
+            {products.map((product)=>(
+              <Col key={product.id}  className='mb-4'>
+                <Item product={product}/>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
   );
 }
 
