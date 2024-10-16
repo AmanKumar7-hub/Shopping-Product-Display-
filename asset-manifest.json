@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Fetching-online-data-and-display/static/css/main.cb0bdbeb.css",
+    "main.js": "/Fetching-online-data-and-display/static/js/main.907ccd74.js",
+    "static/js/453.a26baafa.chunk.js": "/Fetching-online-data-and-display/static/js/453.a26baafa.chunk.js",
+    "index.html": "/Fetching-online-data-and-display/index.html",
+    "main.cb0bdbeb.css.map": "/Fetching-online-data-and-display/static/css/main.cb0bdbeb.css.map",
+    "main.907ccd74.js.map": "/Fetching-online-data-and-display/static/js/main.907ccd74.js.map",
+    "453.a26baafa.chunk.js.map": "/Fetching-online-data-and-display/static/js/453.a26baafa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb0bdbeb.css",
+    "static/js/main.907ccd74.js"
+  ]
+}
